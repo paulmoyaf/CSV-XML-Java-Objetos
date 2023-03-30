@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Productos lista</title>
+        <script>
+            function verProductos(){
+                var httpRequest = new XMLHttpRequest();
+                httpRequest.onreadystatechange = function () {
+                    if (httpRequest.readyState == 4) {
+                        if (httpRequest.status == 200) {
+                            xml = httpRequest.responseXML;
+                        }
+                        else {
+                            xml = false;
+                            document.getElementById("productos").innerHTML = "Error: " + httpRequest.status;
+                        }
+                    }
+                }
+                httpRequest.open("GET", "productos.xml", false);
+                httpRequest.send("");
+
+                httpRequest.onreadystatechange = function () {
+                    if (httpRequest.readyState == 4) {
+                        if (httpRequest.status == 200) {
+                            xsl = httpRequest.responseXML;
+                        }
+                        else {
+                            xsl = false;
+                            document.getElementById("productos").innerHTML = "Error: " + httpRequest.status;
+                        }
+                    }
+                }
+                httpRequest.open("GET", "productosJS.xsl", false);
+                httpRequest.send("");
+
+                if (xml != false && xsl != false) {
+                    xsltProcessor = new XSLTProcessor();
+                    xsltProcessor.importStylesheet(xsl);
+                    resultado = xsltProcessor.transformToFragment(xml, document);
+                    document.getElementById("productos").appendChild(resultado);
+                }
+            }
+
+        </script>
+    </head>
+    <body onload="verProductos()">
+        <h1>Productos lista</h1>
+        <div id="productos"></div>
+    </body>
+</html>

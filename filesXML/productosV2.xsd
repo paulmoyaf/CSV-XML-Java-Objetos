@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="id" type="xsd:string"/>
+    <xsd:element name="marca" type="xsd:string"/>
+    <xsd:element name="precio" type="xsd:double"/>
+    <xsd:element name="descuento" type="xsd:double"/>
+    <xsd:element name="tipo" type="xsd:string"/>
+    <xsd:element name="color" type="xsd:string"/>
+    <xsd:element name="teclas" type="xsd:string"/>
+    <xsd:element name="conector" type="xsd:string"/>
+    <xsd:element name="envio" type="xsd:string"/>
+    <xsd:element name="pvp" type="xsd:double"/>
+
+    <xsd:element name="teclado">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="id"/>
+                <xsd:element ref="marca"/>
+                <xsd:element ref="precio"/>
+                <xsd:element ref="descuento"/>
+                <xsd:element ref="tipo"/>
+                <xsd:element ref="color"/>
+                <xsd:element ref="teclas"/>
+                <xsd:element ref="conector"/>
+                <xsd:element ref="envio"/>
+                <xsd:element ref="pvp"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="productos">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="teclado" minOccurs="1" maxOccurs="unbounded">
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

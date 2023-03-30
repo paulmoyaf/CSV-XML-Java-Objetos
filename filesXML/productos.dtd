@@ -1,0 +1,12 @@
+<!ELEMENT productos (teclado+)>
+<!ELEMENT teclado (id,marca,precio,descuento,tipo,color,teclas,conector,envio,pvp)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT descuento (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT teclas (#PCDATA)>
+<!ELEMENT conector (#PCDATA)>
+<!ELEMENT envio (#PCDATA)>
+<!ELEMENT pvp (#PCDATA)>

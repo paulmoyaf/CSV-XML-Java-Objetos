@@ -1,0 +1,36 @@
+﻿<element name="productos" xmlns="http://relaxng.org/ns/structure/1.0">
+    <oneOrMore>
+        <element name="teclado">
+            <element name="id">
+                <text/>
+            </element>
+            <element name="marca">
+                <text/>
+            </element>
+            <element name="precio">
+                <text/>
+            </element>
+            <element name="descuento">
+                <text/>
+            </element>
+            <element name="tipo">
+                <text/>
+            </element>
+            <element name="color">
+                <text/>
+            </element>
+            <element name="teclas">
+                <text/>
+            </element>
+            <element name="conector">
+                <text/>
+            </element>
+            <element name="envio">
+                <text/>
+            </element>
+            <element name="pvp">
+                <text/>
+            </element>
+        </element>
+    </oneOrMore>
+</element>
