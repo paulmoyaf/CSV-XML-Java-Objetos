@@ -1,6 +1,10 @@
 ## CSV-XML-Java-Objetos
 
-Creación de Orienatada a Objetos, Arrays, Conexion CSV y exportacion a XML 
+Creación de Orienatada a Objetos, Arrays, Conexion CSV y exportacion a XML
+
+- Conexion de informacion con archivos CSV a JAVA.
+- Creacion de objetos, clases abstracta, herencias, polimorfismos. Manejo de Arrays con objetos.
+- Se actualizo el archivo con la creacion de archivos XML.
 
 ## Getting Started
 
